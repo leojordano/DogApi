@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>PS Enext!! Dog API</title>
+  </head>
+  <body>
+    <div id='app'>
+      <div class="cont">
+          <nav>
+              <h1>Dog API</h1>
+              <div class="input-group my-3">
+                <div class="input-group-prepend">
+                    <button onclick="anotherImg()" class="btn btn-outline-secondary another" type="button" id="button-addon1">Trocar Foto</button>
+                  </div>
+                  <select onchange="setBreedImage(value)" class="selectDog breed custom-select" id="select">
+                      <option>Selecione uma raça</option>
+                    </select>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <select onchange="setFont(value)" class="selectDog font custom-select">
+                        <option value='Arial'>Selecione uma fonte</option>
+                        <option value="Rowdies">Rowdies</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Gayathri">Gayathri</option>
+                        <option value="Offside">Offside</option>
+                        <option value="Ranchers">Ranchers</option>
+                        <option value="Oswald">Oswald</option>
+                    </select>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <select onchange="setColor(value)" class="selectDog colorFont custom-select" id="select">
+                        <option value='black'>Selecione uma cor para a fonte</option>
+                        <option value="red">Vermelho</option>
+                        <option value="blue">Azul</option>
+                        <option value='#00ff44'>Verde</option>
+                        <option value='pink'>Rosa</option>
+                        <option value='black'>Preto</option>
+                        <option value='orange'>Laranja</option>
+                    </select>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input onkeyup="setAnimalName(this.value)" class="form-control" type="text" placeholder='Escolha o nome do animal'>
+                </div> 
+
+                <div class="input-group mb-3">
+                    <button data-toggle='modal' data-target='#savedModal' onclick="saveDogData()" class="btn btn-primary">Salvar Dados</button>
+                    <button data-toggle="modal" data-target="#deletedModal" onclick="deleteDogData()" class="btn btn-danger ml-3">Deletar Dados</button>
+                    <button onclick="reload()" class="btn btn-secondary ml-3">Reload</button>
+                </div>
+
+                <div class="modal fade" id="savedModal" tabindex="-1" role="dialog" aria-labelledby="savedLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          Dados salvos com sucesso!!
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="reload()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="deletedModal" tabindex="-1" role="dialog" aria-labelledby="deletedLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          Dados deletados com sucesso!!
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="reload()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </nav>
+            
+            <main>
+                <h2 class="animalName">Escolha um nome</h2>
+                <img loading='lazy' class="img-fluid" id="img" src="" alt="">
+            </main>
+        </div>
+        
+    </div> <!--My app-->
+    <script src="script.js"></script>
+    <footer>
+        Make with Love | <a href="https://github.com/leojordano">LeoJordano</a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

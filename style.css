@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri&family=Offside&family=Oswald&family=Ranchers&family=Rowdies&display=swap');
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background: rgba(179,220,237,1);
+background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -o-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -ms-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group select {
+    text-transform: capitalize;
+}
+
+.cont {
+    background-color: white;
+    margin: 0px auto;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .cont {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    main h2{
+        font-size: 1.5rem;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin: 0px 10px;
+}
+
+main {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-height: 80%;
+}
+
+main img {
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    max-height: 500px;
+    width: 400px;
+}
+
+main h2 {
+    text-transform: capitalize;
+    position: absolute;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
